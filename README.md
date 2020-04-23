@@ -10,6 +10,7 @@ A repository of all my codes and simulations used to teach [Intermediate Statist
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
 * Statistical Mechanics of an Einstein Solid (coming soon ...)
+* Comparison of Einstein and Debye models of specific heat (coming soon ...)
 * Ising model in 2 and 3 dimensions (coming soon...)
 
 
