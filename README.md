@@ -22,6 +22,14 @@ A repository of all my codes and simulations used to teach [Intermediate Statist
 
 [Click here](LICENSE) for license
 
+## Author
+
+Analabha Roy
+Assistant Professor,
+[Department of Physics](https://sites.google.com/a/phys.buruniv.ac.in/physics/), [The University of Burdwan](https://www.buruniv.ac.in/)
+Bardhaman, India 713104
+Webpage: https://www.ph.utexas.edu/~daneel
+
 ## TODO
 
 1. All of the 'coming soons'
