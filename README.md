@@ -1,4 +1,8 @@
 # StatMechCodes
+You can run these codes online by clicking on the binder link below
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hariseldon99/StatmechCodes/master)
+
 ## Introduction
 A repository of all my codes and simulations used to teach [Intermediate Statistical Mechanics](https://bit.ly/mphys0401) to masters students at the 
 [Department of Physics](https://sites.google.com/a/phys.buruniv.ac.in/physics/) in [The University of Burdwan](https://www.buruniv.ac.in/)
@@ -6,7 +10,7 @@ A repository of all my codes and simulations used to teach [Intermediate Statist
 ## List of Codes
 
 * Microscopic Thermodynamics of finite dimensional quantum systems (coming soon ...)
-* [Statistical Mechanics of an Ideal Fermi Gas](Fermigas_ChemPot.ipynb) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hariseldon99/StatMechCodes/master?filepath=Fermigas_ChemPot.ipynb)
+* [Statistical Mechanics of an Ideal Fermi Gas](Fermigas_ChemPot.ipynb)
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
 * Statistical Mechanics of an Einstein Solid (coming soon ...)
