@@ -10,7 +10,7 @@ A repository of all my codes and simulations used to teach [Intermediate Statist
 1. In order to run these notebooks in your computer, perform the following steps.
     * Download it by cloning this repository (see [Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)  for this).
     * Download and install the anaconda python distribution (anaconda @ https://www.anaconda.com/). Also, see [this blog entry](https://fangohr.github.io/blog/installation-of-python-spyder-numpy-sympy-scipy-pytest-matplotlib-via-anaconda.html) on how to install anaconda.
-    * Run this notebook on anaconda.
+    * Run the different codes by loading the corresponding notebooks (the files with the '.ipynb' extension) on anaconda.
 2. For a quick introduction to the Python programming language, as well as Numerical Python, Scientific Python and Matplotlib, see [this tutorial](https://cs231n.github.io/python-numpy-tutorial/)
 3. For a more detailed introduction to the abovementioned topics, see [Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures).
 4. In case you cannot install python locally on your computer, you may run this notebook online through [Binder](https://mybinder.org) by clicking on the "launch binder" badge at the top of this page. You can run these codes online by clicking on the binder link, and then running the different codes by clicking on the corresponding files with '.ipynb' extension.
