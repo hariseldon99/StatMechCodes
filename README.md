@@ -1,5 +1,5 @@
 # StatMechCodes
-You can run these codes online by clicking on the binder link below
+You can run these codes online by clicking on the binder link below, and then running the different codes by clicking on the corresponding files with '.ipynb' extension.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hariseldon99/StatmechCodes/master)
 
@@ -10,7 +10,7 @@ A repository of all my codes and simulations used to teach [Intermediate Statist
 ## List of Codes
 
 * Microscopic Thermodynamics of finite dimensional quantum systems (coming soon ...)
-* [Statistical Mechanics of an Ideal Fermi Gas](Fermigas_ChemPot.ipynb)
+* Statistical Mechanics of an Ideal Fermi Gas: [Fermigas_ChemPot.ipynb]
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
 * Statistical Mechanics of an Einstein Solid (coming soon ...)
