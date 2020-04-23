@@ -17,3 +17,8 @@ A repository of all my codes and simulations used to teach [Intermediate Statist
 ## License
 
 [Click here](LICENSE) for license
+
+## TODO
+
+1. All of the 'coming soons'
+2. Shift the binder container's latex installation from texlive via apt to tinytex manual (if possible)
