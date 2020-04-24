@@ -1,7 +1,7 @@
 Statistical Mechanics Codes and Simulations
 ============================================
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hariseldon99/StatmechCodes/master/blob/index.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hariseldon99/StatmechCodes/blob/master/index.ipynb)
 
 A repository of all my codes and simulations used to teach [Intermediate Statistical Mechanics](https://bit.ly/mphys0401) to masters students at the 
 [Department of Physics](https://sites.google.com/a/phys.buruniv.ac.in/physics/) in [The University of Burdwan](https://www.buruniv.ac.in/)
