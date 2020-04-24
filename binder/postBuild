@@ -1,9 +1,20 @@
 #!/bin/bash
 
-# run matplotlib once to generate the font cache
+##########################################################################
+#Install TinyTeX, a minimalistic LaTeX distribution installed in userspace
+wget -qO- "https://yihui.org/gh/tinytex/tools/install-unx.sh" | sh
+#Add TinyTeX install directories to path
+echo 'PATH=$HOME/bin:$HOME/.local/bin:$PATH' >> $HOME/.bashrc
+#Install extra LaTeX packages needed by matplotlib
+tlmgr install type1cm psnfss dvipng
+tlmgr path add
+
+##########################################################################
+#Run matplotlib once to generate the font cache
 python -c "import matplotlib as mpl; mpl.use('Agg'); import pylab as plt; fig, ax = plt.subplots(); fig.savefig('test.png')"
-	
 test -e test.png && rm test.png
 
+##########################################################################
+#Setup Jupyterlab with laTeX 
 jupyter labextension install @jupyterlab/latex
 jupyter lab build
