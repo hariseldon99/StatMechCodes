@@ -6,8 +6,8 @@ wget -qO- "https://yihui.org/gh/tinytex/tools/install-unx.sh" | sh
 #Add TinyTeX install directories to path
 echo 'PATH=$HOME/bin:$HOME/.local/bin:$PATH' >> $HOME/.bashrc
 #Install extra LaTeX packages needed by matplotlib
-tlmgr install type1cm psnfss dvipng
-tlmgr path add
+$HOME/bin/tlmgr install type1cm psnfss dvipng
+$HOME/bin/tlmgr path add
 
 ##########################################################################
 #Run matplotlib once to generate the font cache
