@@ -1,3 +1,7 @@
+<!--- This file is just a copypasta of the first cell in 'index.ipynb' -->
+<!--- DO NOT make manual changes to the code below. Simply sync it to the first cell of 'index.ipynb' by copy-paste -->
+<!--- So that github renders the content therein automatically when browsing this repository -->
+
 Statistical Mechanics Codes and Simulations
 ============================================
 
@@ -34,7 +38,7 @@ List of Simulations
 Use the following links:
 
 
-* Microscopic Thermodynamics of finite dimensional quantum systems (coming soon ...)
+* [Thermodynamics of finite-size quantum systems](FinSize_Therm.ipynb)
 * [Statistical Mechanics of an Ideal Fermi Gas](FermiGas_ChemPot.ipynb)
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
