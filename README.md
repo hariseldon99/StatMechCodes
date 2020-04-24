@@ -35,7 +35,7 @@ Use the following links:
 
 
 * Microscopic Thermodynamics of finite dimensional quantum systems (coming soon ...)
-* [Statistical Mechanics of an Ideal Fermi Gas](Fermigas_ChemPot.ipynb)
+* [Statistical Mechanics of an Ideal Fermi Gas](FermiGas_ChemPot.ipynb)
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
 * Statistical Mechanics of an Einstein Solid (coming soon ...)
