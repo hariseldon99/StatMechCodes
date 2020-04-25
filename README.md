@@ -42,9 +42,8 @@ Use the following links:
 * [Statistical Mechanics of an Ideal Fermi Gas](FermiGas_ChemPot.ipynb)
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
-* Statistical Mechanics of an Einstein Solid (coming soon ...)
-* Comparison of Einstein and Debye models of specific heat (coming soon ...)
-* Ising model in 2 and 3 dimensions (coming soon...)
+* Metropolis algorithm of an Einstein Solid (coming soon ...)
+* [Metropolis algorithm of the Ising model](Metrop_ising.ipynb)
 
 
 
