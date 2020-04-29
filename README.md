@@ -2,6 +2,7 @@
 <!--- DO NOT make manual changes to the code below. Simply sync it to the first cell of 'index.ipynb' by copy-paste -->
 <!--- So that github renders the content therein automatically when browsing this repository -->
 
+
 Statistical Mechanics Codes and Simulations
 ============================================
 
@@ -15,6 +16,8 @@ The simulations are written in the [Python programming language](https://www.pyt
 
 Instructions
 =========================
+You can run these simulation notebooks by installing the requisite software in your computer, or online through [Google Colab](https://colab.research.google.com/).
+
 
 1. In order to run these notebooks in your computer, perform the following steps.
     * Download this repository by cloning it (see [Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)  for this).
@@ -31,7 +34,7 @@ Instructions
 
 3. For a more detailed introduction to the abovementioned topics, see [Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures).
 
-4. In case you cannot install python locally on your computer, you may run this notebook online through [Google Colab](https://colab.research.google.com/) by clicking on the "Open in Colab" badge at the top of this page. 
+4. In case you cannot install python locally on your computer, you may run this notebook online through [Google Colab](https://colab.research.google.com/) by clicking on the [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hariseldon99/StatMechCodes/blob/master/index.ipynb) badge at the top of this page. 
 
 List of Simulations
 =========================
