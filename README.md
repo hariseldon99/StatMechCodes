@@ -5,7 +5,8 @@
 Statistical Mechanics Codes and Simulations
 ============================================
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hariseldon99/StatmechCodes/master?filepath=index.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/hariseldon99/StatMechCodes/blob/master/index.ipynb)
+
 
 A repository of all my codes and simulations used to teach [Intermediate Statistical Mechanics](https://bit.ly/mphys0401) to masters students at the 
 [Department of Physics](https://sites.google.com/a/phys.buruniv.ac.in/physics/) in [The University of Burdwan](https://www.buruniv.ac.in/)
@@ -30,7 +31,7 @@ Instructions
 
 3. For a more detailed introduction to the abovementioned topics, see [Scientific Python Lectures](https://github.com/jrjohansson/scientific-python-lectures).
 
-4. In case you cannot install python locally on your computer, you may run this notebook online through [Binder](https://mybinder.org) by clicking on the "launch binder" badge at the top of this page. 
+4. In case you cannot install python locally on your computer, you may run this notebook online through [Google Colab](https://colab.research.google.com/) by clicking on the "Open in Colab" badge at the top of this page. 
 
 List of Simulations
 =========================
@@ -43,7 +44,8 @@ Use the following links:
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
 * Metropolis algorithm of an Einstein Solid (coming soon ...)
-* [Metropolis algorithm of the Ising model](Metrop_ising.ipynb)
+<!--* [Metropolis algorithm of the Ising model](Metrop_ising.ipynb) -->
+* Metropolis algorithm of the Ising model (coming soon ...)
 
 
 
