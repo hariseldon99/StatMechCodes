@@ -2,7 +2,6 @@
 <!--- DO NOT make manual changes to the code below. Simply sync it to the first cell of 'index.ipynb' by copy-paste -->
 <!--- So that github renders the content therein automatically when browsing this repository -->
 
-
 Statistical Mechanics Codes and Simulations
 ============================================
 
@@ -44,11 +43,10 @@ Use the following links:
 
 * [Thermodynamics of finite-size quantum systems](FinSize_Therm.ipynb)
 * [Statistical Mechanics of an Ideal Fermi Gas](FermiGas_ChemPot.ipynb)
+* [Metropolis algorithm of the Ising model](Metrop_ising.ipynb)
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
 * Bose - Einstein Condensation (coming soon ...)
 * Metropolis algorithm of an Einstein Solid (coming soon ...)
-<!--* [Metropolis algorithm of the Ising model](Metrop_ising.ipynb) -->
-* Metropolis algorithm of the Ising model (coming soon ...)
 
 
 
