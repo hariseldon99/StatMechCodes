@@ -53,7 +53,7 @@ Use the following links:
 License
 =======
 
-This work is licensed under a [GNU Public Lecense v3](LICENSE)
+This work is licensed under a [GNU Public License v3](LICENSE)
 
 
 
