@@ -353,8 +353,8 @@ if __name__ == '__main__':
     plt.rcParams.update({'figure.autolayout':True})
     
     #Simulation Parameters
-    lattice_shape = (10,10)
-    maxtime = 5e4
+    lattice_shape = (20,20)
+    maxtime = 1e5
     h = 0.01
     temp = 1.0
     
