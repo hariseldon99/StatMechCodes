@@ -1,14 +1,11 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Sun May  3 21:01:27 2020
 
 @author: daneel
 """
 # Changes by A. Roy @ https://github.com/StatMechCodes/Metrop_Ising.ipynb
-
 import numpy as np
-import matplotlib.animation as anim
+from celluloid import Camera
 import matplotlib.pyplot as plt
 from tqdm import tqdm
 
@@ -246,59 +243,7 @@ class IsingLattice:
             yield self 
 
 
-def ising_video(lattice, plotter):
-    """Prepare one frame of video for ising model simulation
-    """
-    #Get thermodynamics from continuously updated epochdata dict
-    t = lattice.epochdata["epochs"]
-    mags = lattice.epochdata["mags"]
-    chis = lattice.epochdata["chis"]
-    energies = lattice.epochdata["energies"]
-    cvs = lattice.epochdata["cvs"]
-    
-    #Clear the plot of the previous frame and replot
-    plotter.clf()
-    # Get the figure and gridspec
-    fig3 = plotter.gcf()
-    grid = fig3.add_gridspec(4, 2)
-
-    #Plot lattice on this axis
-    lattice_ax = fig3.add_subplot(grid[0:,0])
-    lattice_ax.set_title("T=%2.2lf, h=%2.2lf, size = %d" % (lattice.T,\
-                                                           lattice.h,\
-                                                           lattice.size))
-    lattice_ax.axes.get_xaxis().set_visible(False)
-    lattice_ax.axes.get_yaxis().set_visible(False)
-    lattice_ax.imshow(lattice.system)
-
-    #Plot thermodynamic quantities on these axes
-    #Note that we're plotting time averages uptp the instant 
-    mags_ax = fig3.add_subplot(grid[0,1])
-    if  mags:
-        mags_ax.set_title("m = %1.4lf" % np.average(mags))
-        mags_ax.axes.get_xaxis().set_visible(False)
-        mags_ax.plot(t, np.cumsum(mags)/np.arange(1,1+len(mags)))
-            
-    x_ax = fig3.add_subplot(grid[1,1])
-    if  chis:    
-        x_ax.set_title("X = %1.4lf" % np.average(chis))
-        x_ax.axes.get_xaxis().set_visible(False)
-        x_ax.plot(t, np.cumsum(chis)/np.arange(1,1+len(chis)))
-
-    energy_ax = fig3.add_subplot(grid[2,1])    
-    if  energies:
-        energy_ax.set_title("e = %1.4lf" % np.average(energies))
-        energy_ax.axes.get_xaxis().set_visible(False)
-        energy_ax.plot(t, np.cumsum(energies)/np.arange(1,1+len(energies)))
-
-    cv_ax = fig3.add_subplot(grid[3,1])    
-    if  cvs:    
-        cv_ax.set_title("Cv = %1.4lf" % np.average(cvs))
-        cv_ax.set_xlabel("t (mc steps)")
-        cv_ax.plot(t, np.cumsum(cvs)/np.arange(1,1+len(cvs)))
-
-
-def ising_run(lattice, plotter,video=True, video_frate=60, **kwargs):
+def ising_run(lattice, plotter,video=True, video_frate=60, video_time=60,  **kwargs):
     """
     Runs the actual metropolis algorithm
     Parameters
@@ -312,6 +257,8 @@ def ising_run(lattice, plotter,video=True, video_frate=60, **kwargs):
         
         video       : Boolean for showing video of simulation, Default is True
         video_frate : Video frame rate in fps (frames per second), Default is 60
+        video_frate : Video time ins seconds, Default is 60 secs
+
         
         Additional keyword arguments are passed to the matplotlib figure. 
         See their documentation for details.
@@ -322,27 +269,64 @@ def ising_run(lattice, plotter,video=True, video_frate=60, **kwargs):
         Otherwise, it returns a matplotlib.animation object
         """
     if video:
-        ani = anim.FuncAnimation(plotter.figure(**kwargs), ising_video, \
-                                 frames=lattice.metrop_gen,\
-                                 interval=1e3/video_frate,\
-                                 fargs=(plotter,), save_count=lattice.max_epochs, repeat=False)
+        # Get the figure and gridspec
+        fig3 = plotter.gcf()
+        grid = fig3.add_gridspec(4, 2)
+        #Plot lattice on this axis
+        lattice_ax = fig3.add_subplot(grid[0:,0])
+        lattice_ax.set_title("T=%2.2lf, h=%2.2lf, size = %d" % (lattice.T,\
+                                                               lattice.h,\
+                                                               lattice.size))
+        lattice_ax.axes.get_xaxis().set_visible(False)
+        lattice_ax.axes.get_yaxis().set_visible(False)
+
+        #Plot thermodynamic quantities on these axes
+        mags_ax = fig3.add_subplot(grid[0,1])
+        x_ax = fig3.add_subplot(grid[1,1])
+        energy_ax = fig3.add_subplot(grid[2,1])    
+        cv_ax = fig3.add_subplot(grid[3,1])    
+        
+        camera = Camera(fig3)
+        frame_rate = video_frate
+        frames = frame_rate * video_time
+        snap_rate = max(int(lattice.max_epochs/frames), 2)
+        snaps = 0
+        for lattice in lattice.metrop_gen():
+            #Get thermodynamics from continuously updated epochdata dict
+            t = lattice.epochdata["epochs"]
+            mags = lattice.epochdata["mags"]
+            chis = lattice.epochdata["chis"]
+            energies = lattice.epochdata["energies"]
+            cvs = lattice.epochdata["cvs"]
+            
+            #Plot the lattice and all thermodynamic quantities (time average)
+            lattice_ax.imshow(lattice.system)
+            if  mags:
+                mags_ax.axes.get_xaxis().set_visible(False)
+                mags_ax.plot(t, np.cumsum(mags)/np.arange(1,1+len(mags)),'b')
+            if  chis:    
+                x_ax.axes.get_xaxis().set_visible(False)
+                x_ax.plot(t, np.cumsum(chis)/np.arange(1,1+len(chis)),'b')  
+            if  energies:
+                energy_ax.axes.get_xaxis().set_visible(False)
+                energy_ax.plot(t, np.cumsum(energies)/np.arange(1,1+len(energies)),'b')  
+            if  cvs:    
+                cv_ax.set_xlabel("t (mc steps)")
+                cv_ax.plot(t, np.cumsum(cvs)/np.arange(1,1+len(cvs)),'b')   
+            snaps = snaps + 1
+            if snaps == snap_rate:
+                camera.snap()
+                snaps = 0 #reset the snap
     else:
-        ani = None
+        camera = None
         #This runs the lattice metropolis generator
         for lattice in lattice.metrop_gen():
             pass
-    return ani
+    return camera
 
 if __name__ == '__main__':
     print("DONE!")
 
-if __name__ == '__main__':
-
-    fps = 15
-    # Set up formatting for the movie files
-    Writer = anim.writers['ffmpeg']
-    writer = Writer(fps=fps, bitrate=1800)
-    
     #Size of fonts
     fs = 20
     plt.rcParams.update({'axes.titlesize': fs})
@@ -353,7 +337,7 @@ if __name__ == '__main__':
     plt.rcParams.update({'figure.autolayout':True})
     
     #Simulation Parameters
-    lattice_shape = (1,100)
+    lattice_shape = (1, 100)
     maxtime = 1e5
     h = 0.01
     temp = 1.0
@@ -366,9 +350,7 @@ if __name__ == '__main__':
                      temperature=temp,\
                      field=h, max_epochs=maxtime)
     
-    
     #Run and display the Ising animation
-    ani = ising_run(l, plt,video=True)
-    
-    #Uncomment this if you want to save the video to a file
-    ani.save('ising_1d_video.mp4', writer=writer)
+    ani = ising_run(l,plt,video=True)
+    print("Simulation Complete! Now rendering video. Please wait...")
+    ani.animate().save('ising_1d_video.mp4')
