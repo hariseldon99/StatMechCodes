@@ -325,7 +325,7 @@ def ising_run(lattice, plotter,video=True, video_frate=60, **kwargs):
         ani = anim.FuncAnimation(plotter.figure(**kwargs), ising_video, \
                                  frames=lattice.metrop_gen,\
                                  interval=1e3/video_frate,\
-                                 fargs=(plotter,), repeat=False)
+                                 fargs=(plotter,), save_count=lattice.max_epochs, repeat=False)
     else:
         ani = None
         #This runs the lattice metropolis generator
