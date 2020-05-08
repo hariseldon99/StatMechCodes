@@ -42,6 +42,7 @@ Use the following links:
 
 
 * [Thermodynamics of finite-size quantum systems](FinSize_Therm.ipynb)
+* [Statistical Mechanics of an Ideal Bose Gas](BoseGas_ChemPot.ipynb)
 * [Statistical Mechanics of an Ideal Fermi Gas](FermiGas_ChemPot.ipynb)
 * [Metropolis algorithm of the Ising model](Metrop_Ising.ipynb)
 * Statistical Mechanics of an Ideal Bose Gas (coming soon ...)
