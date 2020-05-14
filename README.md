@@ -45,7 +45,7 @@ Use the following links:
 * [Statistical Mechanics of an Ideal Bose Gas](BoseGas_ChemPot.ipynb)
 * [Statistical Mechanics of an Ideal Fermi Gas](FermiGas_ChemPot.ipynb)
 * [Metropolis algorithm of the Ising model](Metrop_Ising.ipynb)
-* Bose - Einstein Condensation (coming soon ...)
+* [Bose - Einstein Condensation](BEC_Trap.ipynb)
 * Metropolis algorithm of an Einstein Solid (coming soon ...)
 
 
